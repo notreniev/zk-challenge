@@ -10,21 +10,18 @@
 }
 
 .card-credentials{
-    padding-top: 10%;
-}
-
-.card-header {
-  float: right;
-  padding: 0.5rem 0.5rem 0 0;
-  margin-bottom: 0;
-  background-color: transparent;
-  border-bottom: none;
+    padding-top: 4%;
+    padding-left: 4%;
 }
 
 .card-img-top {
-  width: 100%;
+  width: 140%;
   border-radius: 50%;
   border: solid 0px;
+}
+
+div .col-4{
+    margin-left: -6% !important;
 }
 
 .card-text{
@@ -41,7 +38,7 @@
   font-weight: bold;
   color: #777;
   letter-spacing: 0.1rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .card-subtitle{
@@ -50,6 +47,18 @@
     text-transform: uppercase;
     color: cornflowerblue;
     flex-wrap: nowrap;
+}
+
+.fav{
+    background-image: url("../../../../assets/star.png");      
+    border: solid 0px;
+    background-size: contain;
+    background-repeat: repeat;
+    display: inline-block;
+    width: 7vw;
+    height: 1.4vh;
+    position: relative;
+    /* left: -0.2rem; */
 }
 
 h5 span{
