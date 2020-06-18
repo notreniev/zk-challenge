@@ -1,34 +1,13 @@
 <div class="card">
+    <div class="card-header" *ngIf="card.header">
+        {{card.header}}
+    </div>
     <div class="card-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <img class="card-img-top"
-                         [src]="card.photo"
-                         alt="{{ card.name }}" />
-                </div>
-                <div class="col-8">
-                    <div class="card-credentials">
-                        <h6 class="card-title">Professional name</h6>
-                        <h5 class="card-subtitle">Psicologyst <span>| Lisbon</span></h5>
-                        <h5 class="card-text">
-                            <div class="fav"></div> <span> (20 reviews)</span>
-                        </h5>
-                        <h5 class="card-text">R$ 160 <span> / 50 MINUTES</span></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <app-card-content [data]="card.content"></app-card-content>
         <div class="card-bottom">
             <br>
-            <div class="card-text mb-2 text-muted">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ullam perspiciatis tenetur
-                    laboriosam
-                    cupiditate odio, dolore voluptatibus necessitatibus dignissimos blanditiis totam!
-                    Consectetur
-                    distinctio, nisi assumenda non quis cupiditate molestiae nobis.
-                </p>
+            <div class="card-text mb-2 text-muted" *ngIf="card.bottom">
+                <p>{{card.footer}}</p>
             </div>
         </div>
     </div>

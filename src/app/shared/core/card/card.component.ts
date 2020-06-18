@@ -7,10 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input('data') card: any = {};
+  //@Input('data') card: any;
+  @Input('data') card: any;
 
   constructor() { 
-    this.card.photo = 'assets/default-profile-image-woman.png'
   }
 
   ngOnInit(): void {

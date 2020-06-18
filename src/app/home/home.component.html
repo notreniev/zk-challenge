@@ -2,13 +2,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-6"
-             style="border: solid 0px;">
-            <app-card></app-card>
+        <div class="col-sm">
+            <!-- <app-card [data]="cardProfile"></app-card> -->
+            <app-profile [content]="profile"></app-profile>
         </div>
-        <div class="col-6"
-             style="border: solid 1px;">
-            2 of 2
+        <div class="col-sm">
+            <!-- <app-card [data]="cardSchedule"></app-card> -->
+            <app-schedule [content]="schedule"></app-schedule>
         </div>
     </div>
 </div>

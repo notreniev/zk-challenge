@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <img class="profile-img-top"
+                 [src]="profile.photo"
+                 alt="{{ profile.name }}" />
+        </div>
+        <div class="col-8">
+            <div class="profile-data">
+                <h6 class="profile-title">{{profile.name}}</h6>
+                <h5 class="profile-subtitle">{{profile.subtitle}} 
+                    <span>| {{profile.location}}</span>
+                    <br>
+                    <div class="fav"></div> <span> ({{profile.reviews}} reviews)</span>
+                </h5>
+                <h5 class="profile-price">{{profile.price | currency:'BRL'}} <span> / {{profile.time}} MINUTES</span></h5>
+            </div>        
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <div class="profile-text mb-2 text-muted">
+                <p>{{profile.text}}</p>
+            </div>
+        </div>
+    </div>
+</div>

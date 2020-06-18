@@ -1,0 +1,73 @@
+.content-img-top {
+  width: 140%;
+  border-radius: 50%;
+  border: solid 0px;
+}
+
+.profile-data{
+    padding-top: 4%;
+    padding-left: 4%;
+}
+
+.profile-title {
+    font-weight: bold;
+    color: #777;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+  }
+
+.profile-subtitle{
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: cornflowerblue;
+    flex-wrap: nowrap;
+}
+
+.profile-text{
+    padding-top: 4%;
+    font-size: 0.7rem;
+}
+
+.profile-price{
+    font-weight: bold;
+    padding-top: 0%;
+    font-size: 0.7rem;
+}
+
+h5 span{
+    padding-top: 0%;
+    font-size: 0.7rem;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #999;
+}
+
+.fav{
+    background-image: url("../../../../assets/star.png");      
+    border: solid 0px;
+    background-size: contain;
+    background-repeat: repeat;
+    display: inline-block;
+    width: 7vw;
+    height: 1.4vh;
+    position: relative;
+    /* left: -0.2rem; */
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  .profile-link {
+    font-size: 10pt;
+    color: #333;
+    padding: 0 0 0 10% !important;
+  }
+  
+  .profile-link:hover {
+    font-size: 10pt;
+    color: blue;
+    padding: 0 0 0 10% !important;
+  }

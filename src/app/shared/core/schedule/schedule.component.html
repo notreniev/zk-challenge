@@ -1,1 +1,14 @@
-<p>schedule works!</p>
+<div class="card">
+    <div class="card-header" *ngIf="schedule.header">
+        {{schedule.header}}
+    </div>
+    <div class="card-body">
+
+        <div class="card-bottom">
+            <br>
+            <div class="card-text mb-2 text-muted" *ngIf="schedule.footer">
+                <p>{{schedule.footer}}</p>
+            </div>
+        </div>
+    </div>
+</div>
