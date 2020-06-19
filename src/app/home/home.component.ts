@@ -42,6 +42,14 @@ export class HomeComponent implements OnInit {
       { time: '-' }, { time: '09:00' }, { time: '09:00' }, { time: '09:00' },
       { time: '-' }, { time: '09:30' }, { time: '09:30' }, { time: '09:30' },
       { time: '-' }, { time: '10:00' }, { time: '10:00' }, { time: '10:00' },
+      { time: '-' }, { time: '10:30' }, { time: '10:30' }, { time: '10:30' },
+      { time: '-' }, { time: '10:00' }, { time: '10:00' }, { time: '10:00' },
+      { time: '-' }, { time: '10:00' }, { time: '10:00' }, { time: '10:00' },
+      { time: '-' }, { time: '10:00' }, { time: '10:00' }, { time: '10:00' },
+      { time: '-' }, { time: '10:00' }, { time: '10:00' }, { time: '10:00' },
+      { time: '-' }, { time: '10:00' }, { time: '10:00' }, { time: '10:00' },
+      { time: '-' }, { time: '10:00' }, { time: '10:00' }, { time: '10:00' },
+      { time: '-' }, { time: '10:00' }, { time: '10:00' }, { time: '10:00' },
       { time: '-' }, { time: 'MORE' }, { time: 'MORE' }, { time: 'MORE' }
     ]
   };
