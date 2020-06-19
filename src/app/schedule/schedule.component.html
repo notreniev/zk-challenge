@@ -49,7 +49,7 @@
   <div class="card-body">
     <div class="flex-container col-sm-12">
       <div *ngFor="let slot of schedule.content.slots; let i = index">
-        <div class="slot">
+        <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
           {{slot.time}}
         </div>
       </div>
