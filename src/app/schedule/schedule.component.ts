@@ -11,8 +11,7 @@ export class ScheduleComponent implements OnInit {
   faAngleDoubleLeft = left;
   faAngleDoubleRight = right;
 
-  @Input('content') schedule: any;
-
+  @Input() schedule: any;
   @ViewChild('widgetsContent', { read: ElementRef }) public widgetsContent: ElementRef<any>;
 
   public scrollRight(): void {
@@ -21,6 +20,10 @@ export class ScheduleComponent implements OnInit {
 
   public scrollLeft(): void {
     this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft - 150), behavior: 'smooth' });
+  }
+
+  setDate(date) {
+    console.log(date);
   }
 
   constructor() {

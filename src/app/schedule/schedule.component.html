@@ -8,20 +8,25 @@
   <div class="card-body">
     <div class="row">
       <div class="col-sm">
-        <div style="float: left;">
+        <div class="arrow-left">
           <fa-icon [icon]="faAngleDoubleLeft" (click)="scrollLeft()"></fa-icon>
         </div>
         <div class="col-sm">
           <div #widgetsContent class="middle">
-            <div class="info-widget" *ngFor="let s of schedule.content.dates">
-              <p>{{ s.weekday }}</p>
-              {{ s.day }}
+            <div
+              class="info-widget"
+              *ngFor="let date of schedule.content.dates"
+            >
+              <div (click)="setDate(date)">
+                <p>{{ date.weekday }}</p>
+                {{ date.day }}
+              </div>
             </div>
           </div>
         </div>
 
         <div class="col-sm">
-          <div style="float: right;">
+          <div class="arrow-right">
             <fa-icon
               [icon]="faAngleDoubleRight"
               (click)="scrollRight()"
