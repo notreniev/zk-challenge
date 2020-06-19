@@ -2,25 +2,25 @@
     <div class="row">
         <div class="col-4">
             <img class="profile-img-top"
-                 [src]="profile.photo"
-                 alt="{{ profile.name }}" />
+                 [src]="profile.content.photo"
+                 alt="{{ profile.content.name }}" />
         </div>
         <div class="col-8">
             <div class="profile-data">
-                <h6 class="profile-title">{{profile.name}}</h6>
-                <h5 class="profile-subtitle">{{profile.subtitle}} 
-                    <span>| {{profile.location}}</span>
+                <h6 class="profile-title">{{profile.content.name}}</h6>
+                <h5 class="profile-subtitle">{{profile.content.subtitle}} 
+                    <span>| {{profile.content.location}}</span>
                     <br>
-                    <div class="fav"></div> <span> ({{profile.reviews}} reviews)</span>
+                    <div class="fav"></div> <span> ({{profile.content.reviews}} reviews)</span>
                 </h5>
-                <h5 class="profile-price">{{profile.price | currency:'BRL'}} <span> / {{profile.time}} MINUTES</span></h5>
+                <h5 class="profile-price">{{profile.content.price | currency:'BRL'}} <span> / {{profile.content.time}} MINUTES</span></h5>
             </div>        
         </div>
     </div>
     <div class="row">
         <div class="col-sm">
             <div class="profile-text mb-2 text-muted">
-                <p>{{profile.text}}</p>
+                <p>{{profile.content.text}}</p>
             </div>
         </div>
     </div>
