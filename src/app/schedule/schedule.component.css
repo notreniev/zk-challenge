@@ -20,7 +20,7 @@
   width: 20%;
   height: 40px;
   border: 0px solid black;
-  margin: 0 1% 0 1%;
+  margin: 0 2% 0 3%;
   display: inline-block;
   word-wrap: break-word;
   text-align: center;
@@ -73,8 +73,8 @@
 .slot{
   text-align: center;
   min-width: 4rem;
-  margin: 0.4em;
-  padding: 0.5em;
+  margin: 0.4rem;
+  padding: 0.4rem;
   background-color: rgb(213, 222, 231);
   color: grey;
   font-size: 0.8rem;
@@ -85,8 +85,8 @@
 .slot-free{
   text-align: center;
   min-width: 4rem;
-  margin: 0.4em;
-  padding: 0.5em;
+  margin: 0.4rem;
+  padding: 0.4rem;
   background-color:white;
   color: grey;
   font-size: 0.8rem;
