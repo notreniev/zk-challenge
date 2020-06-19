@@ -6,7 +6,7 @@
 
 .profile-data {
   padding-top: 4%;
-  padding-left: 4%;
+  padding-left: 8%;
 }
 
 .profile-title {
@@ -47,22 +47,20 @@ h5 span {
   background-image: url("../../assets/star.png");
   border: solid 0px;
   background-size: contain;
-  background-repeat: repeat;
   display: inline-block;
-  width: 7vw;
+  width: 5.5vw;
   height: 1.4vh;
   position: relative;
-  /* left: -0.2rem; */
 }
 
 .profile-link {
   font-size: 10pt;
   color: #333;
-  padding: 0 0 0 10% !important;
+  padding: 0 0 0 10%;
 }
 
 .profile-link:hover {
   font-size: 10pt;
   color: blue;
-  padding: 0 0 0 10% !important;
+  padding: 0 0 0 10%;
 }

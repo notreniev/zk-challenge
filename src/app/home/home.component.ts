@@ -35,6 +35,14 @@ export class HomeComponent implements OnInit {
       { weekday: 'tue', day: 'AUG 25' },
       { weekday: 'wed', day: 'AUG 26' },
       { weekday: 'thu', day: 'AUG 27' }
+    ],
+    slots: [
+      { time: '-' }, { time: '08:00' }, { time: '08:00' }, { time: '08:00' },
+      { time: '-' }, { time: '08:30' }, { time: '08:30' }, { time: '08:30' },
+      { time: '-' }, { time: '09:00' }, { time: '09:00' }, { time: '09:00' },
+      { time: '-' }, { time: '09:30' }, { time: '09:30' }, { time: '09:30' },
+      { time: '-' }, { time: '10:00' }, { time: '10:00' }, { time: '10:00' },
+      { time: '-' }, { time: 'MORE' }, { time: 'MORE' }, { time: 'MORE' }
     ]
   };
 
@@ -46,6 +54,8 @@ export class HomeComponent implements OnInit {
     header: 'Schedule your session',
     content: this.schedule,
   };
+
+
 
   constructor() {
   }

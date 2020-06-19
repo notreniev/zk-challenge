@@ -1,22 +1,22 @@
 <div class="card">
+  
   <div class="card-header" *ngIf="schedule.header">
     <div class="schedule-title">{{ schedule.header }}</div>
     <div class="schedule-subtitle">
       Timezone: {{ schedule.content.timezone }}
     </div>
   </div>
+
   <div class="card-body">
     <div class="row">
       <div class="col-sm">
         <div class="arrow-left">
           <fa-icon [icon]="faAngleDoubleLeft" (click)="scrollLeft()"></fa-icon>
         </div>
+
         <div class="col-sm">
           <div #widgetsContent class="middle">
-            <div
-              class="info-widget"
-              *ngFor="let date of schedule.content.dates"
-            >
+            <div class="info-widget" *ngFor="let date of schedule.content.dates">
               <div (click)="setDate(date)">
                 <p>{{ date.weekday }}</p>
                 {{ date.day }}
@@ -41,6 +41,18 @@
     <br />
     <div class="card-text mb-2 text-muted">
       <p>{{ schedule.footer }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="card card-slots">
+  <div class="card-body">
+    <div class="flex-container col-sm-12">
+      <div *ngFor="let slot of schedule.content.slots; let i = index">
+        <div class="slot">
+          {{slot.time}}
+        </div>
+      </div>
     </div>
   </div>
 </div>
