@@ -44,7 +44,7 @@ h5 span {
 }
 
 .fav {
-  background-image: url("../../../../assets/star.png");
+  background-image: url("../../assets/star.png");
   border: solid 0px;
   background-size: contain;
   background-repeat: repeat;

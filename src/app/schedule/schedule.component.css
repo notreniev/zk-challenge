@@ -1,0 +1,44 @@
+.schedule-title {
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.schedule-subtitle {
+  font-size: 0.7rem;
+  color: #fff;
+  flex-wrap: nowrap;
+}
+
+.schedule-text {
+  padding-top: 4%;
+  font-size: 0.7rem;
+}
+
+.info-widget {
+  width: 20%;
+  height: 40px;
+  border: 0px solid black;
+  margin: 0 1% 0 1%;
+  display: inline-block;
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.info-widget p {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  margin-bottom: 0em;
+}
+.middle {
+  float: left;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 90%;
+  overflow: auto;
+  /*will change this to hidden later to deny scolling to user*/
+  white-space: nowrap;
+}

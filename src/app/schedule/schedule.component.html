@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header" *ngIf="schedule.header">
+    <div class="schedule-title">{{ schedule.header }}</div>
+    <div class="schedule-subtitle">
+      Timezone: {{ schedule.content.timezone }}
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm">
+        <div style="float: left;">
+          <fa-icon [icon]="faAngleDoubleLeft" (click)="scrollLeft()"></fa-icon>
+        </div>
+        <div class="col-sm">
+          <div #widgetsContent class="middle">
+            <div class="info-widget" *ngFor="let s of schedule.content.dates">
+              <p>{{ s.weekday }}</p>
+              {{ s.day }}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div style="float: right;">
+            <fa-icon
+              [icon]="faAngleDoubleRight"
+              (click)="scrollRight()"
+            ></fa-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-bottom" *ngIf="schedule.footer">
+    <br />
+    <div class="card-text mb-2 text-muted">
+      <p>{{ schedule.footer }}</p>
+    </div>
+  </div>
+</div>

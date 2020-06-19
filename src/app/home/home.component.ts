@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { Card } from '../shared/models/card.model';
-import { Profile } from '../shared/models/profile.model';
-import { Schedule } from '../shared/models/schedule.model';
+import { Card } from '../shared/core/models/card.model';
+import { Profile } from '../shared/core/models/profile.model';
+import { Schedule } from '../shared/core/models/schedule.model';
 
 @Component({
   selector: 'app-home',
@@ -48,13 +47,8 @@ export class HomeComponent implements OnInit {
     content: this.schedule,
   };
 
-  constructor(config: NgbCarouselConfig) {
-    // customize default values of carousels used by this component tree
-    config.interval = 10000;
-    config.wrap = false;
-    config.keyboard = false;
-    config.pauseOnHover = false;
+  constructor() {
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
