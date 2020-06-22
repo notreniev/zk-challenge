@@ -113,6 +113,17 @@
     border: solid 1px #000 !important;
 }
 
+.slot-free {
+    text-align: center;
+    padding: 0.5rem 0.1rem 0.5rem 0.1rem;
+    margin: 2px;
+    color: grey;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 3px;
+    border: solid 0px
+}
+
 .slot {
     text-align: center;
     padding: 0.5rem 0.1rem 0.5rem 0.1rem;
@@ -125,21 +136,10 @@
     border: solid 0px
 }
 
-.slot-free {
-    text-align: center;
-    padding: 0.5rem 0.1rem 0.5rem 0.1rem;
-    margin: 2px;
-    color: grey;
-    font-size: 0.7rem;
-    font-weight: bold;
-    border-radius: 3px;
-    border: solid 0px
-}
-
 .slots-col {
     width: 5rem;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     padding: 0rem;
     overflow: auto;
     /*will change this to hidden later to deny scolling to user*/
@@ -147,7 +147,7 @@
 }
 
 .slots-info {
-    height: 230px;
+    height: 235px;
     border: 0px solid black;
     margin: 0 0rem 0 0rem;
     padding: 0 0rem 0 0rem;
