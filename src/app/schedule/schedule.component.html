@@ -58,13 +58,13 @@
             <div #slotContent1 class="slots-col ">
                 <div class=" col-sm slots-info">
                     <div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
-                        <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}" *ngIf="i==6">
-                            <a href="home/#last1">MORE</a>
+                        <div class="slot" *ngIf="i % 7 == 6 && !last">
+                            <a href="home#last1{{i+6}}">MORE</a>
                         </div>
                         <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
-                            {{slot.time}}
+                            <a href="home#" (click)="setTime(slot)">{{slot.time}}</a>
                         </div>
-                        <div *ngIf="last" id="last1"></div>
+                        <div id="last1{{i+6}}"></div>
                     </div>
                 </div>
             </div>
@@ -72,13 +72,13 @@
             <div class="slots-col ">
                 <div class=" col-sm slots-info" #slotContent2>
                     <div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
-                        <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}" *ngIf="i==6">
-                            <a href="home/#last2">MORE</a>
+                        <div class="slot" *ngIf="i % 7 == 6 && !last">
+                            <a href="home#last2{{i+6}}">MORE</a>
                         </div>
                         <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
-                            {{slot.time}}
+                            <a href="home#" (click)="setTime(slot)">{{slot.time}}</a>
                         </div>
-                        <div *ngIf="last" id="last2"></div>
+                        <div id="last2{{i+6}}"></div>
                     </div>
                 </div>
             </div>
@@ -86,13 +86,13 @@
             <div #slotContent3 class="slots-col ">
                 <div class=" col-sm slots-info">
                     <div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
-                        <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}" *ngIf="i==6">
-                            <a href="home/#last3">MORE</a>
+                        <div class="slot" *ngIf="i % 7 == 6 && !last">
+                            <a href="home#last3{{i+6}}">MORE</a>
                         </div>
                         <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
-                            {{slot.time}}
+                            <a href="home#" (click)="setTime(slot)">{{slot.time}}</a>
                         </div>
-                        <div *ngIf="last" id="last3"></div>
+                        <div id="last3{{i+6}}"></div>
                     </div>
                 </div>
             </div>
