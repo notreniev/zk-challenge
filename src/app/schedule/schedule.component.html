@@ -50,8 +50,8 @@
                 <div class="slots-col ">
                     <div class=" col-sm slots-info">
                         <div *ngFor="let slot of schedule.content.slots; let i = index">
-                            <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
-                                {{slot.time}}
+                            <div [ngClass]="{'slot-free': slot.time != '-' , 'slot': slot.time == '-'}">
+                                -
                             </div>
                         </div>
                     </div>
