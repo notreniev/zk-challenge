@@ -8,7 +8,7 @@
     </div>
 
     <div class="card-body">
-        <div class="row">
+        <div class="row weekdays">
             <div class="col-sm">
                 <div class="arrow-left">
                     <fa-icon [icon]="faAngleDoubleLeft" (click)="scrollLeft()"></fa-icon>
@@ -19,7 +19,7 @@
                         <div class="info-widget" *ngFor="let date of schedule.content.dates">
                             <div (click)="setDate(date)">
                                 <p>{{ date.weekday }}</p>
-                                {{ date.day }}
+                                <p>{{ date.day }}</p>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="middle-v ">
-                    <div class=" col-sm-3  info-widget-v">
+                    <div class=" col-sm-3 info-widget-v">
                         <div *ngFor="let slot of schedule.content.slots; let i = index">
                             <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
                                 {{slot.time}}
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="middle-v ">
-                    <div class=" col-sm-3  info-widget-v">
+                    <div class=" col-sm-3 info-widget-v">
                         <div *ngFor="let slot of schedule.content.slots; let i = index">
                             <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
                                 {{slot.time}}

@@ -1,80 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 
 .card-header {
-  text-align: center;
-  color: white;
+    text-align: center;
+    color: white;
 }
 
 .card-header {
-  background-color: dodgerblue;
+    background-color: dodgerblue;
 }
 
 .card {
-  transition: 0.2s ease-in;
-  box-shadow: 3px 3px 12px #c7c7c7, -3px -3px 12px #ffffff;
+    transition: 0.2s ease-in;
+    box-shadow: 3px 3px 12px #c7c7c7, -3px -3px 12px #ffffff;
 }
 
 .card-title {
-  font-weight: bold;
-  color: #777;
-  letter-spacing: 0.1rem;
-  font-size: 0.8rem;
+    font-weight: bold;
+    color: #777;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
 }
 
 .card-subtitle {
-  font-size: 0.6rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: cornflowerblue;
-  flex-wrap: nowrap;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: cornflowerblue;
+    flex-wrap: nowrap;
 }
 
 .card-text {
-  padding-top: 4%;
-  font-size: 0.7rem;
+    padding-top: 4%;
+    font-size: 0.7rem;
 }
 
 .card-link {
-  font-size: 10pt;
-  color: #333;
-  padding: 0 0 0 10% !important;
+    font-size: 10pt;
+    color: #333;
+    padding: 0 0 0 10% !important;
 }
 
 .card-link:hover {
-  font-size: 10pt;
-  color: blue;
-  padding: 0 0 0 10% !important;
+    font-size: 10pt;
+    color: blue;
+    padding: 0 0 0 10% !important;
 }
-
-/* .carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  color: 20px;
-  text-align: center;
-  opacity: unset;
-  color: #000;
-}
-
-.carousel-control-next-icon {
-  background-image: url(data:image/svg+xml,%3csvg xmlns=http://www.w3.org/2000/svg fill=%23000 width=8 height=8 viewBox=0 0 8 8%3e%3cpath d=M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z/%3e%3c/svg%3e);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-}
-.carousel-control-prev-icon {
-  background-image: escape-svg(#000);
-}
-.carousel-control-next-icon {
-  background-image: escape-svg(#000);
-} */

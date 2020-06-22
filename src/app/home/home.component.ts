@@ -34,7 +34,10 @@ export class HomeComponent implements OnInit {
       { weekday: 'mon', day: 'AUG 24' },
       { weekday: 'tue', day: 'AUG 25' },
       { weekday: 'wed', day: 'AUG 26' },
-      { weekday: 'thu', day: 'AUG 27' }
+      { weekday: 'thu', day: 'AUG 27' },
+      { weekday: 'thu', day: 'AUG 28' },
+      { weekday: 'thu', day: 'AUG 29' },
+      { weekday: 'thu', day: 'AUG 30' }
     ],
     slots: [
       { time: '08:00' }, { time: '08:30' }, { time: '09:00' }, { time: '09:30' },
