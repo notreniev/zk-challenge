@@ -22,32 +22,36 @@ export class HomeComponent implements OnInit {
     photo: 'assets/default-profile-image-woman.png',
   };
 
+  time = [
+    { time: '08:00' }, { time: '08:30' }, { time: '09:00' }, { time: '09:30' },
+    { time: '10:00' }, { time: '10:30' }, { time: '11:00' }, { time: '11:30' },
+    { time: '12:00' }, { time: '12:30' }, { time: '13:00' }, { time: '13:30' },
+    { time: '14:00' }, { time: '14:30' }, { time: '15:00' }, { time: '15:30' },
+    { time: '16:00' }, { time: '16:30' }, { time: '17:00' }, { time: '17:30' },
+    { time: '18:00' }, { time: '18:30' }, { time: '19:00' }, { time: '19:30' },
+    { time: '20:00' }, { time: '20:30' }, { time: '21:00' }, { time: '21:30' }
+  ];
+
+  datas = [
+    { weekday: 'mon', day: 'AUG 19', slots: this.time },
+    { weekday: 'tue', day: 'AUG 20', slots: this.time },
+    { weekday: 'wed', day: 'AUG 21', slots: this.time },
+    { weekday: 'thu', day: 'AUG 22', slots: this.time },
+    { weekday: 'fri', day: 'AUG 23', slots: this.time },
+    { weekday: 'mon', day: 'AUG 24', slots: this.time },
+    { weekday: 'tue', day: 'AUG 25', slots: this.time },
+    { weekday: 'wed', day: 'AUG 26', slots: this.time },
+    { weekday: 'thu', day: 'AUG 27', slots: this.time },
+    { weekday: 'thu', day: 'AUG 28', slots: this.time },
+    { weekday: 'thu', day: 'AUG 29', slots: this.time },
+    { weekday: 'thu', day: 'AUG 30', slots: this.time }
+  ];
+
   schedule: Schedule = {
     header: 'Schedule your session',
     timezone: 'Lisbon (+1)',
-    dates: [
-      { weekday: 'mon', day: 'AUG 19' },
-      { weekday: 'tue', day: 'AUG 20' },
-      { weekday: 'wed', day: 'AUG 21' },
-      { weekday: 'thu', day: 'AUG 22' },
-      { weekday: 'fri', day: 'AUG 23' },
-      { weekday: 'mon', day: 'AUG 24' },
-      { weekday: 'tue', day: 'AUG 25' },
-      { weekday: 'wed', day: 'AUG 26' },
-      { weekday: 'thu', day: 'AUG 27' },
-      { weekday: 'thu', day: 'AUG 28' },
-      { weekday: 'thu', day: 'AUG 29' },
-      { weekday: 'thu', day: 'AUG 30' }
-    ],
-    slots: [
-      { time: '08:00' }, { time: '08:30' }, { time: '09:00' }, { time: '09:30' },
-      { time: '10:00' }, { time: '10:30' }, { time: '11:00' }, { time: '11:30' },
-      { time: '12:00' }, { time: '12:30' }, { time: '13:00' }, { time: '13:30' },
-      { time: '14:00' }, { time: '14:30' }, { time: '15:00' }, { time: '15:30' },
-      { time: '16:00' }, { time: '16:30' }, { time: '17:00' }, { time: '17:30' },
-      { time: '18:00' }, { time: '18:30' }, { time: '19:00' }, { time: '19:30' },
-      { time: '20:00' }, { time: '20:30' }, { time: '21:00' }, { time: '21:30' }
-    ]
+    dates: this.datas,
+    slots: this.time
   };
 
   cardProfile: Card = {

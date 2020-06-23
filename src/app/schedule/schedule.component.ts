@@ -14,8 +14,9 @@ export class ScheduleComponent implements OnInit {
   @Input() schedule: any;
   @ViewChild('widgetsContent', { read: ElementRef }) public widgetsContent: ElementRef<any>;
 
-  appointments = [];
-  appointment = {};
+  appointmentsList = [];
+  dates: any = [];
+  appointment: any = {};
 
   public scrollRight(): void {
     this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft + 150), behavior: 'smooth' });
@@ -26,25 +27,26 @@ export class ScheduleComponent implements OnInit {
   }
 
   setDate(date) {
-    sessionStorage.setItem('date', JSON.stringify(date));
+    console.log('date', date);
+    this.dates[0] = date;
   }
 
   setTime(time){
-    sessionStorage.setItem('time', JSON.stringify(time));
-    this.storeData(time);
+    console.log('time', time);
+    this.dates[1] = time;
+    this.getData();
   }
 
-  storeData(data){
-    const sdate = sessionStorage.getItem('date');
-    const stime = sessionStorage.getItem('time');
+  getData(){
     this.appointment = {
-      date: sdate,
-      time: stime
+      date: this.dates[0],
+      time: this.dates[1]
     };
-    this.appointments.push(this.appointment);
+
+    this.appointmentsList.push(this.appointment);
     // sessionStorage.removeItem('date');
     // sessionStorage.removeItem('time');
-    console.log(this.appointments);
+    console.log('dates', this.appointment);
   }
 
   constructor() {

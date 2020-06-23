@@ -42,9 +42,8 @@
     </div>
 </div>
 
-<div class="card card-slots">
-    <div class="card-body ">
-
+<div class="card card-slots" *ngIf="true">
+    <div class="card-body">
         <div class="flex-container">
             <div class="slots-col ">
                 <div class=" col-sm slots-info">
@@ -55,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div #slotContent1 class="slots-col ">
+            <div class="slots-col ">
                 <div class=" col-sm slots-info">
                     <div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
                         <div class="slot" *ngIf="i % 7 == 6 && !last">
@@ -83,7 +82,7 @@
                 </div>
             </div>
 
-            <div #slotContent3 class="slots-col ">
+            <div class="slots-col ">
                 <div class=" col-sm slots-info">
                     <div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
                         <div class="slot" *ngIf="i % 7 == 6 && !last">
@@ -96,8 +95,18 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
+    </div>
+
+    <div class="card-bottom">
+        <div class="card-text mb-2 text-muted">
+            <!-- <p *ngIf="appointment.date && appointment.time">Date: {{appointment.date | json}}
+                <br> Time: {{appointment.time | json}}
+            </p> -->
+            <button>Schedule</button>
+        </div>
     </div>
 
 </div>
