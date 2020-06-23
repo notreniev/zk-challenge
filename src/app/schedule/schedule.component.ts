@@ -27,12 +27,12 @@ export class ScheduleComponent implements OnInit {
   }
 
   setDate(date) {
-    console.log('date', date);
+    //console.log('date', date);
     this.dates[0] = date;
   }
 
   setTime(time){
-    console.log('time', time);
+    //console.log('time', time);
     this.dates[1] = time;
     this.getData();
   }
@@ -46,7 +46,7 @@ export class ScheduleComponent implements OnInit {
     this.appointmentsList.push(this.appointment);
     // sessionStorage.removeItem('date');
     // sessionStorage.removeItem('time');
-    console.log('dates', this.appointment);
+    //console.log('dates', this.appointment);
   }
 
   constructor() {

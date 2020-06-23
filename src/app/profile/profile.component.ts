@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  @Input('content') profile: any;
-  
+  @Input() profile: any;
+
   constructor() { }
 
   ngOnInit(): void {
