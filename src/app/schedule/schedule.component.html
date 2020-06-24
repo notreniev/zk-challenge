@@ -1,99 +1,100 @@
-<div class="card">
-    <div class="card-header">
-        <div class="schedule-title">{{ schedule.header }}</div>
-        <div class="schedule-subtitle">
-            Timezone: {{ schedule.subheader }}
-        </div>
-    </div>
+<div class="alerts-area">
+    <small class="alert alert-danger" *ngIf="alert.danger">{{alert.danger}}</small>
+    <small class="alert alert-success" *ngIf="alert.success">{{alert.success}}</small>
+</div>
 
-    <div class="card-body">
-        <div class="row weekdays">
-            <div class="col-sm">
-                <!-- Componente de slider com os dias do mês-->
-                <app-dates-slider [schedule]="schedule"></app-dates-slider>
+<div style="z-index: -1;">
+    <div class="card">
+        <div class="card-header">
+            <div class="schedule-title">{{ schedule.header }}</div>
+            <div class="schedule-subtitle">
+                Timezone: {{ schedule.subheader }}
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="row weekdays">
+                <div class="col-sm">
+                    <!-- Componente de slider com os dias do mês-->
+                    <app-dates-slider [schedule]="schedule"></app-dates-slider>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-bottom" *ngIf="schedule.footer">
+            <br />
+            <div class="card-text mb-2 text-muted">
+                <p>{{ schedule.footer }}</p>
             </div>
         </div>
     </div>
 
-    <div class="card-bottom" *ngIf="schedule.footer">
-        <br />
-        <div class="card-text mb-2 text-muted">
-            <p>{{ schedule.footer }}</p>
-        </div>
-    </div>
-</div>
-
-<div class="card card-slots" *ngIf="true">
-    <div class="card-body">
-        <div class="flex-container">
-            <div class="slots-col ">
-                <div class=" col-sm slots-info">
-                    <!-- 
+    <div class="card card-slots" *ngIf="true">
+        <div class="card-body">
+            <div class="flex-container">
+                <div class="slots-col ">
+                    <div class=" col-sm slots-info">
+                        <!-- 
                         Deixei esse trecho propositalmente para 
                         exemplificar a regra de negócio de como seriam
                         os slots de tempo ocupados
                     -->
-                    <div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
-                        <div class="slot" *ngIf="i % 7 == 6 && !last">
-                            <a href="home#last1{{i+6}}">MORE</a>
-                        </div>
-                        <div [ngClass]="{'slot': slot.scheduled}">
-                            <a href="home#" (click)="setTime(slot)" *ngIf="slot.scheduled==1">
+                        <div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
+                            <div class="slot" *ngIf="i % 7 == 6 && !last">
+                                <a href="home#last1{{i+6}}">MORE</a>
+                            </div>
+                            <div [ngClass]="{'slot': slot.scheduled}">
+                                <a href="home#" (click)="setTime(slot)" *ngIf="slot.scheduled==1">
                                 {{slot.time}}
                             </a>
 
-                            <span *ngIf="slot.scheduled==0">
+                                <span *ngIf="slot.scheduled==0">
                                 -
                             </span>
 
+                            </div>
+                            <div id="last1{{i+6}}"></div>
                         </div>
-                        <div id="last1{{i+6}}"></div>
                     </div>
                 </div>
-            </div>
-            <div class="slots-col ">
-                <div class=" col-sm slots-info">
-                    <!-- Aqui é o exemplo de slots componentizado. Os estados não estão sendo 
+                <div class="slots-col ">
+                    <div class=" col-sm slots-info">
+                        <!-- Aqui é o exemplo de slots componentizado. Os estados não estão sendo 
                         controlados neste componente devido aos dados serem estaticos -->
-                    <app-time-slot [schedule]="schedule" [id]="2"></app-time-slot>
+                        <app-time-slot [schedule]="schedule" [id]="2"></app-time-slot>
+                    </div>
+                </div>
+
+                <div class="slots-col ">
+                    <div class=" col-sm slots-info">
+                        <app-time-slot [schedule]="schedule" [id]="3"></app-time-slot>
+                    </div>
+                </div>
+
+                <div class="slots-col ">
+                    <div class=" col-sm slots-info">
+                        <app-time-slot [schedule]="schedule" [id]="4"></app-time-slot>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="slots-col ">
-                <div class=" col-sm slots-info">
-                    <app-time-slot [schedule]="schedule" [id]="3"></app-time-slot>
+            <div class="card-bottom">
+                <div class="card-text mb-2 text-muted">
+                    <button class="btn btn-primary" (click)="add()">Add</button>
+                    <hr>
+                    <p *ngIf="appointmentsList.length">Schedules: </p>
+                    <div *ngFor="let item of appointmentsList" class="schedule-results">
+                        <ul>
+                            <li>{{item.date.weekday}} - {{item.date.day}} - {{item.time.time}}
+                                <fa-icon [icon]="remove" (click)="rm(item.id)" title="Remove Schedule" alt="Remove Schedule"></fa-icon>&nbsp;
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="slots-col ">
-                <div class=" col-sm slots-info">
-                    <app-time-slot [schedule]="schedule" [id]="4"></app-time-slot>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="card-bottom">
-            <div class="card-text mb-2 text-muted">
-                <button class="btn btn-primary" (click)="add()">Add</button>
-                <hr>
-                <p *ngIf="appointmentsList.length">Schedules: </p>
-                <div *ngFor="let item of appointmentsList" class="schedule-results">
-                    <ul>
-                        <li>{{item.date.weekday}} - {{item.date.day}} - {{item.time.time}}
-                            <fa-icon [icon]="remove" (click)="rm(item.id)" title="Remove Schedule" alt="Remove Schedule"></fa-icon>&nbsp;
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="alert alert-danger" *ngIf="alert.danger">
-                <small>{{alert.danger}}</small>
-            </div>
-            <div class="alert alert-success" *ngIf="alert.success">
-                <small>{{alert.success}}</small>
             </div>
 
         </div>
-
     </div>
+</div>
