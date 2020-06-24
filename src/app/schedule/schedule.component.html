@@ -16,10 +16,11 @@
 
                 <div class="col-sm">
                     <div #widgetsContent class="middle">
-                        <div class="info-widget" *ngFor="let date of schedule.content.dates; let i = index">
+                        <div class="info-widget" id="info-widget" *ngFor="let date of schedule.content.dates; let i = index">
                             <div (click)="setDate(date)">
-                                <p>{{ date.weekday }}</p>
-                                <p>{{ date.day }}</p>
+                                <a href="home#">
+                                    <p>{{ date.weekday }} <br> {{ date.day }}</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -97,15 +98,21 @@
             </div>
 
         </div>
-
     </div>
 
     <div class="card-bottom">
         <div class="card-text mb-2 text-muted">
-            <!-- <p *ngIf="appointment.date && appointment.time">Date: {{appointment.date | json}}
-                <br> Time: {{appointment.time | json}}
-            </p> -->
-            <button class="btn btn-primary">Schedule</button>
+            <button class="btn btn-primary" (click)="add()">Add</button>
+            <hr>
+            <p *ngIf="appointmentsList.length">Schedules: </p>
+            <div *ngFor="let item of appointmentsList" class="schedule-results">
+                <ul>
+                    <li>{{item.date.weekday}} - {{item.date.day}} - {{item.time.time}}
+                        <fa-icon [icon]="remove" (click)="rm(item.id)" title="Remove Schedule" alt="Remove Schedule"></fa-icon>&nbsp;
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </div>
 

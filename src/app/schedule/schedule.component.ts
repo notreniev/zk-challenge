@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { faAngleLeft as left, faAngleRight as right } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft as left, faAngleRight as right, faTrashAlt as rem } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-schedule',
@@ -10,13 +10,13 @@ export class ScheduleComponent implements OnInit {
 
   faAngleDoubleLeft = left;
   faAngleDoubleRight = right;
+  remove = rem;
 
   @Input() schedule: any;
   @ViewChild('widgetsContent', { read: ElementRef }) public widgetsContent: ElementRef<any>;
 
   appointmentsList = [];
-  dates: any = [];
-  appointment: any = {};
+  appointment;
 
   public scrollRight(): void {
     this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft + 150), behavior: 'smooth' });
@@ -27,26 +27,30 @@ export class ScheduleComponent implements OnInit {
   }
 
   setDate(date) {
-    //console.log('date', date);
-    this.dates[0] = date;
+    sessionStorage.setItem('date', JSON.stringify(date));
   }
 
   setTime(time){
-    //console.log('time', time);
-    this.dates[1] = time;
-    this.getData();
+    sessionStorage.setItem('time', JSON.stringify(time));
   }
 
-  getData(){
-    this.appointment = {
-      date: this.dates[0],
-      time: this.dates[1]
-    };
+  add(){
+    this.appointment = {};
+    this.appointment.date = JSON.parse(sessionStorage.getItem('date'));
+    this.appointment.time = JSON.parse(sessionStorage.getItem('time'));
+    this.appointment.id = Number(new Date());
 
     this.appointmentsList.push(this.appointment);
-    // sessionStorage.removeItem('date');
-    // sessionStorage.removeItem('time');
-    //console.log('dates', this.appointment);
+    console.log('appointmentList', this.appointmentsList);
+
+    sessionStorage.removeItem('date');
+    sessionStorage.removeItem('time');
+  }
+
+  rm(id){
+    console.log(id);
+    const index = this.appointmentsList.indexOf(id);
+    this.appointmentsList.splice(index, 1);
   }
 
   constructor() {

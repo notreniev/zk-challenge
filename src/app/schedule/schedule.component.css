@@ -20,6 +20,19 @@
     font-size: 0.7rem;
 }
 
+.schedule-results {
+    font-size: 0.8rem;
+}
+
+.schedule-results ul {
+    padding: 0;
+    margin: 0;
+}
+
+.schedule-results li {
+    list-style: none;
+}
+
 .info-widget {
     height: 40px;
     border: 0px solid black;
@@ -28,6 +41,27 @@
     text-align: center;
     font-size: 0.7rem;
     color: #666;
+    cursor: pointer;
+}
+
+.info-widget a:visited {
+    background-color: lightblue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: #666;
+}
+
+.info-widget a:link {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.info-widget a:hover,
+a:active {
+    background-color: lightblue;
+    color: white;
 }
 
 .info-widget p {
