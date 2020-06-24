@@ -1,3 +1,6 @@
+## Print
+![Print](https://raw.githubusercontent.com/notreniev/zk-chellenge/master/src/assets/print.png)
+
 ## Preparation
 
 Run `npm i` to download depencendency packages.
@@ -18,5 +21,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-![Print](https://raw.githubusercontent.com/notreniev/zk-chellenge/master/src/assets/print.png)
 
