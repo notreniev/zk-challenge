@@ -1,0 +1,26 @@
+.slot {
+    background-color: rgb(213, 222, 231);
+    text-align: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.1rem;
+    margin: 2px;
+    color: #999;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 3px;
+    border: solid 0px
+}
+
+.slot a {
+    color: #666;
+}
+
+.slot-disabled a {
+    text-align: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.1rem;
+    margin: 2px;
+    color: #999;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 3px;
+    border: solid 0px
+}

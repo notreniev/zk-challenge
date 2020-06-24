@@ -122,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "zenklub"
+  "defaultProject": "zenklub",
+  "cli": {
+    "analytics": "de006417-ab1f-4e7b-b525-a0edefedab19"
+  }
 }
