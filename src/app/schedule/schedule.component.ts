@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { faAngleLeft as left, faAngleRight as right, faTrashAlt as rem } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt as rem } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-schedule',
@@ -8,8 +8,6 @@ import { faAngleLeft as left, faAngleRight as right, faTrashAlt as rem } from '@
 })
 export class ScheduleComponent implements OnInit {
 
-  left = left;
-  right = right;
   remove = rem;
   alert: any = {};
 
@@ -61,7 +59,7 @@ export class ScheduleComponent implements OnInit {
     this.cleanUpMessages();
   }
 
-  cleanUpMessages = () => {
+  private cleanUpMessages = () => {
     setTimeout(() => {
       this.alert.success = '';
       this.alert.danger = '';
