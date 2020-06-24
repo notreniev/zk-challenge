@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { TimeSlotComponent } from './shared/core/time-slot/time-slot.component';
+import { DatesSliderComponent } from './shared/core/dates-slider/dates-slider.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ScheduleComponent } from './schedule/schedule.component';
     AppComponent,
     HomeComponent,
     ScheduleComponent,
-    ProfileComponent
+    ProfileComponent,
+    TimeSlotComponent,
+    DatesSliderComponent
   ],
   imports: [
     BrowserModule,

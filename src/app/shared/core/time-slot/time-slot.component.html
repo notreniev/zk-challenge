@@ -1,0 +1,9 @@
+<div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
+    <div class="slot" *ngIf="i % 7 == 6 && !last">
+        <a href="home#last{{id}}{{i+6}}">MORE</a>
+    </div>
+    <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
+        <a href="home#" (click)="setTime(slot)">{{slot.time}}</a>
+    </div>
+    <div id="last{{id}}{{i+6}}"></div>
+</div>

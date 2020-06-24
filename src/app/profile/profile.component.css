@@ -1,66 +1,66 @@
 .profile-img-top {
-  width: 140%;
-  border-radius: 50%;
-  border: solid 0px;
+    width: 140%;
+    border-radius: 50%;
+    border: solid 0px;
 }
 
 .profile-data {
-  padding-top: 4%;
-  padding-left: 8%;
+    padding-top: 4%;
+    padding-left: 8%;
 }
 
 .profile-title {
-  font-weight: bold;
-  color: #777;
-  letter-spacing: 0.1rem;
-  font-size: 0.8rem;
+    font-weight: bold;
+    color: #777;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
 }
 
 .profile-subtitle {
-  font-size: 0.6rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: cornflowerblue;
-  flex-wrap: nowrap;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: cornflowerblue;
+    flex-wrap: nowrap;
 }
 
 .profile-text {
-  padding-top: 4%;
-  font-size: 0.7rem;
+    padding-top: 4%;
+    font-size: 0.7rem;
 }
 
 .profile-price {
-  font-weight: bold;
-  padding-top: 0%;
-  font-size: 0.7rem;
+    font-weight: bold;
+    padding-top: 0%;
+    font-size: 0.7rem;
 }
 
 h5 span {
-  padding-top: 0%;
-  font-size: 0.7rem;
-  font-weight: normal;
-  text-transform: capitalize;
-  color: #999;
+    padding-top: 0%;
+    font-size: 0.7rem;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #999;
 }
 
 .fav {
-  background-image: url("../../assets/star.png");
-  border: solid 0px;
-  background-size: contain;
-  display: inline-block;
-  width: 4.5vw;
-  height: 1.4vh;
-  position: relative;
+    background-image: url("../../assets/star.png");
+    border: solid 0px;
+    background-size: contain;
+    display: inline-block;
+    min-width: 4.5rem;
+    height: 1.4vh;
+    position: relative;
 }
 
 .profile-link {
-  font-size: 10pt;
-  color: #333;
-  padding: 0 0 0 10%;
+    font-size: 10pt;
+    color: #333;
+    padding: 0 0 0 10%;
 }
 
 .profile-link:hover {
-  font-size: 10pt;
-  color: blue;
-  padding: 0 0 0 10%;
+    font-size: 10pt;
+    color: blue;
+    padding: 0 0 0 10%;
 }

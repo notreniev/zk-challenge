@@ -1,0 +1,17 @@
+<div class="arrow-left">
+    <fa-icon [icon]="left" (click)="scrollLeft()"></fa-icon>
+</div>
+
+<div #widgetsContent class="middle">
+    <div class="info-widget" id="info-widget" *ngFor="let date of schedule.content.dates; let i = index">
+        <div (click)="setDate(date)">
+            <a href="home#">
+                <p>{{ date.weekday }} <br> {{ date.day }}</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="arrow-right">
+    <fa-icon [icon]="right" (click)="scrollRight()"></fa-icon>
+</div>

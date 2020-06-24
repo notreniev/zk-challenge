@@ -14,22 +14,9 @@ export class ScheduleComponent implements OnInit {
   alert: any = {};
 
   @Input() schedule: any;
-  @ViewChild('widgetsContent', { read: ElementRef }) public widgetsContent: ElementRef<any>;
 
   appointmentsList = [];
   appointment;
-
-  public scrollRight(): void {
-    this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft + 150), behavior: 'smooth' });
-  }
-
-  public scrollLeft(): void {
-    this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft - 155), behavior: 'smooth' });
-  }
-
-  setDate(date) {
-    sessionStorage.setItem('date', JSON.stringify(date));
-  }
 
   setTime(time){
     sessionStorage.setItem('time', JSON.stringify(time));

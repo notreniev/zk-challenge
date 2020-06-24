@@ -1,0 +1,57 @@
+.info-widget {
+    height: 40px;
+    border: 0px solid black;
+    display: inline-block;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.info-widget a:visited {
+    background-color: lightblue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: #666;
+    border-radius: 4px;
+}
+
+.info-widget a:link {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: #666;
+}
+
+.info-widget a:hover,
+a:active {
+    color: black;
+}
+
+.info-widget p {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin: 0em 0.5rem 0 0.5rem;
+    padding: 0em 0.5rem 0 0.5rem;
+}
+
+.middle {
+    float: left;
+    width: 88%;
+    /* padding-right: 1%; */
+    overflow: auto;
+    /*will change this to hidden later to deny scolling to user*/
+    white-space: nowrap;
+}
+
+.arrow-left {
+    float: left;
+    margin-left: 0.5rem;
+}
+
+.arrow-right {
+    float: right;
+    margin-right: 0.5rem;
+}
