@@ -11,6 +11,7 @@ export class ScheduleComponent implements OnInit {
   faAngleDoubleLeft = left;
   faAngleDoubleRight = right;
   remove = rem;
+  alert: any = {};
 
   @Input() schedule: any;
   @ViewChild('widgetsContent', { read: ElementRef }) public widgetsContent: ElementRef<any>;
@@ -35,22 +36,49 @@ export class ScheduleComponent implements OnInit {
   }
 
   add(){
+    const sdate = JSON.parse(sessionStorage.getItem('date'));
+    const stime = JSON.parse(sessionStorage.getItem('time'));
+
+    if (!sdate) {
+      this.alert.danger = 'You need do select a date';
+      this.cleanUpMessages();
+      return;
+    }
+
+    if (!stime) {
+      this.alert.danger = 'You need to select a time';
+      this.cleanUpMessages();
+      return;
+    }
+
     this.appointment = {};
-    this.appointment.date = JSON.parse(sessionStorage.getItem('date'));
-    this.appointment.time = JSON.parse(sessionStorage.getItem('time'));
+    this.appointment.date = sdate;
+    this.appointment.time = stime;
     this.appointment.id = Number(new Date());
 
     this.appointmentsList.push(this.appointment);
-    console.log('appointmentList', this.appointmentsList);
 
     sessionStorage.removeItem('date');
     sessionStorage.removeItem('time');
+
+    this.alert.success = 'Schedule saved successfully';
+
+    this.cleanUpMessages();
   }
 
   rm(id){
-    console.log(id);
     const index = this.appointmentsList.indexOf(id);
     this.appointmentsList.splice(index, 1);
+    this.alert.success = 'Schedule removed successfully';
+
+    this.cleanUpMessages();
+  }
+
+  cleanUpMessages = () => {
+    setTimeout(() => {
+      this.alert.success = '';
+      this.alert.danger = '';
+    }, 3000);
   }
 
   constructor() {
