@@ -1,5 +1,4 @@
 <div class="card">
-
     <div class="card-header">
         <div class="schedule-title">{{ schedule.header }}</div>
         <div class="schedule-subtitle">
@@ -8,35 +7,27 @@
     </div>
 
     <div class="card-body">
-        <div class="alert alert-danger" *ngIf="alert.danger">
-            <small>{{alert.danger}}</small>
-        </div>
-        <div class="alert alert-success" *ngIf="alert.success">
-            <small>{{alert.success}}</small>
-        </div>
         <div class="row weekdays">
             <div class="col-sm">
+
                 <div class="arrow-left">
-                    <fa-icon [icon]="faAngleDoubleLeft" (click)="scrollLeft()"></fa-icon>
+                    <fa-icon [icon]="left" (click)="scrollLeft()"></fa-icon>
                 </div>
 
-                <div class="col-sm">
-                    <div #widgetsContent class="middle">
-                        <div class="info-widget" id="info-widget" *ngFor="let date of schedule.content.dates; let i = index">
-                            <div (click)="setDate(date)">
-                                <a href="home#">
-                                    <p>{{ date.weekday }} <br> {{ date.day }}</p>
-                                </a>
-                            </div>
+                <div #widgetsContent class="middle">
+                    <div class="info-widget" id="info-widget" *ngFor="let date of schedule.content.dates; let i = index">
+                        <div (click)="setDate(date)">
+                            <a href="home#">
+                                <p>{{ date.weekday }} <br> {{ date.day }}</p>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm">
-                    <div class="arrow-right">
-                        <fa-icon [icon]="faAngleDoubleRight" (click)="scrollRight()"></fa-icon>
-                    </div>
+                <div class="arrow-right">
+                    <fa-icon [icon]="right" (click)="scrollRight()"></fa-icon>
                 </div>
+
             </div>
         </div>
     </div>
@@ -78,28 +69,43 @@
             </div>
             <div class="slots-col ">
                 <div class=" col-sm slots-info">
-                    <!--
-                        Trecho de código componentizado
-                    -->
-                    <app-time-slot [schedule]="schedule" [id]="2"></app-time-slot>
+                    <div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
+                        <div class="slot" *ngIf="i % 7 == 6 && !last">
+                            <a href="home#last2{{i+6}}">MORE</a>
+                        </div>
+                        <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
+                            <a href="home#" (click)="setTime(slot)">{{slot.time}}</a>
+                        </div>
+                        <div id="last2{{i+6}}"></div>
+                    </div>
                 </div>
             </div>
 
             <div class="slots-col ">
                 <div class=" col-sm slots-info">
-                    <!--
-                        Trecho de código componentizado
-                    -->
-                    <app-time-slot [schedule]="schedule" [id]="3"></app-time-slot>
+                    <div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
+                        <div class="slot" *ngIf="i % 7 == 6 && !last">
+                            <a href="home#last3{{i+6}}">MORE</a>
+                        </div>
+                        <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
+                            <a href="home#" (click)="setTime(slot)">{{slot.time}}</a>
+                        </div>
+                        <div id="last3{{i+6}}"></div>
+                    </div>
                 </div>
             </div>
 
             <div class="slots-col ">
                 <div class=" col-sm slots-info">
-                    <!--
-                        Trecho de código componentizado
-                    -->
-                    <app-time-slot [schedule]="schedule" [id]="4"></app-time-slot>
+                    <div *ngFor="let slot of schedule.content.slots; let i = index; let first = first; let last = last">
+                        <div class="slot" *ngIf="i % 7 == 6 && !last">
+                            <a href="home#last4{{i+6}}">MORE</a>
+                        </div>
+                        <div [ngClass]="{'slot': slot.time != '-' , 'slot-free': slot.time == '-'}">
+                            <a href="home#" (click)="setTime(slot)">{{slot.time}}</a>
+                        </div>
+                        <div id="last4{{i+6}}"></div>
+                    </div>
                 </div>
             </div>
 
@@ -118,8 +124,15 @@
                     </li>
                 </ul>
             </div>
-
         </div>
+
+        <div class="alert alert-danger" *ngIf="alert.danger">
+            <small>{{alert.danger}}</small>
+        </div>
+        <div class="alert alert-success" *ngIf="alert.success">
+            <small>{{alert.success}}</small>
+        </div>
+
     </div>
 
 </div>

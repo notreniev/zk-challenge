@@ -8,8 +8,8 @@ import { faAngleLeft as left, faAngleRight as right, faTrashAlt as rem } from '@
 })
 export class ScheduleComponent implements OnInit {
 
-  faAngleDoubleLeft = left;
-  faAngleDoubleRight = right;
+  left = left;
+  right = right;
   remove = rem;
   alert: any = {};
 
